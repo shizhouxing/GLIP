@@ -56,8 +56,10 @@ class GLIPDemo(object):
         self.palette = torch.tensor([2 ** 25 - 1, 2 ** 15 - 1, 2 ** 21 - 1])
         self.cpu_device = torch.device("cpu")
         self.confidence_threshold = confidence_threshold
-
+                     
         self.tokenizer = self.build_tokenizer()
+
+        self.color = 255
 
     def build_transform(self):
         """
